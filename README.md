@@ -2,7 +2,6 @@
 this is a simple socket on line
 
 
-## Build Setup
 
 ``` bash
 # install dependencies
