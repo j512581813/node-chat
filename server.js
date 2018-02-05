@@ -20,7 +20,7 @@ const express = require('express'), //引入express模块
 	       		console.log(nickname);
 	       		socket.userIndex = names.length;
             	socket.nickname = nickname;
-	       		socket.emit('loginSuccess');
+	       		var flag = socket.emit('loginSuccess');
             	io.sockets.emit('system', nickname, names.length, 'login'); //向所有连接到服务器的客户端发送当前登陆用户的昵称 
 	       }else{
 	       		socket.emit('nickExisted');
