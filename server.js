@@ -6,6 +6,7 @@ const express = require('express'), //引入express模块
     app = express(),
     server = require('http').createServer(app).listen(9099),
     io = require('socket.io').listen(server);
+    app.use('/lib', express.static(__dirname + '/src/'));
 	app.use('/',(req,res)=>{
 		res.sendFile(__dirname + '/index.html');
 	});
